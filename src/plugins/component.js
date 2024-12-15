@@ -486,7 +486,7 @@ export default {
 				},
 
 				/**
-				 * 是否有显示或操作字段的权限
+				 * 是否有显示��操作字段的权限
 				 * @param {String} action 操作名
 				 * @param {String} field 查询的字段
 				 */
@@ -497,6 +497,7 @@ export default {
 						auth = o["field_" + action];
 					}
 					if (auth) {
+						if (auth === '*') return true;
 						return auth.indexOf(field) !== -1;
 					}
 					return false;
@@ -678,7 +679,7 @@ export default {
 				// 	if (/^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/.test(value)) {
 				// 		callback();
 				// 	} else {
-				// 		callback(new Error("您输入身份证格式不正确,请按照`地址码``年份码``月份码``日期码``顺序码``校验码`的格式输入"));
+				// 		callback(new Error("您输入身份证格式不正确,请按���`地址码``年份码``月份码``日期码``顺序码``校验码`的格式输入"));
 				// 	}
 				// },
 
