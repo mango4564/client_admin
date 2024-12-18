@@ -1,3 +1,6 @@
+# node 依赖目录
 node_modules/
+**/node_modules/
+
 # 缓存文件
 .cache
